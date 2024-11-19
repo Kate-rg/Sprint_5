@@ -15,9 +15,9 @@ class TestJumpFromAccountToLK:
 
         WebDriverWait(driver, 3).until(expected_conditions.url_to_be(TestUrl.LOGIN_URL))
         success_registration = driver.find_element(*TestLocators.TITLE_ENTER)
+
         assert success_registration.is_displayed() and success_registration.text == 'Вход'
 
-        driver.quit()
 
     def test_jump_to_acc_to_lk_with_login(self, driver):
         driver.get(TestUrl.MAIN_URL)
@@ -35,7 +35,5 @@ class TestJumpFromAccountToLK:
 
         WebDriverWait(driver, 3).until(expected_conditions.url_to_be(TestUrl.PROFILE_URL))
         success_registration = driver.find_element(*TestLocators.PROFILE)
+
         assert success_registration.is_displayed()
-
-        driver.quit()
-

@@ -24,7 +24,3 @@ class TestExitAccount:
         login_title = driver.find_element(*TestLocators.BUTTON_EXIT)
         assert login_title.is_displayed() and login_title.text == 'Выход'
 
-        driver.quit()
-
-
-

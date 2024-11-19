@@ -26,7 +26,6 @@ class TestJumpFromAccountToConstructor:
         title_collect_burger = driver.find_element(*TestLocators.TITLE_COLLECT_BURGER)
         assert title_collect_burger.is_displayed() and title_collect_burger.text == 'Соберите бургер'
 
-        driver.quit()
 
     def test_jump_from_acc_to_constructor_by_logo(self, driver):
         driver.get(TestUrl.MAIN_URL)
@@ -48,5 +47,3 @@ class TestJumpFromAccountToConstructor:
 
         title_collect_burger = driver.find_element(*TestLocators.TITLE_COLLECT_BURGER)
         assert title_collect_burger.is_displayed() and title_collect_burger.text == 'Соберите бургер'
-
-        driver.quit()

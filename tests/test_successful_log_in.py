@@ -20,8 +20,6 @@ class TestSuccessfulLogIn:
         form_an_order = driver.find_element(*TestLocators.FORM_AN_ORDER)
         assert form_an_order.is_displayed() and form_an_order.text == 'Оформить заказ'
 
-        driver.quit()
-
 
     def test_successful_log_in_from_main_lk(self, driver):
         driver.get(TestUrl.MAIN_URL)
@@ -36,8 +34,6 @@ class TestSuccessfulLogIn:
         WebDriverWait(driver, 3).until(expected_conditions.url_to_be(TestUrl.MAIN_URL))
         form_an_order = driver.find_element(*TestLocators.FORM_AN_ORDER)
         assert form_an_order.is_displayed() and form_an_order.text == 'Оформить заказ'
-
-        driver.quit()
 
 
     def test_successful_log_in_registration_form(self, driver):
@@ -54,7 +50,6 @@ class TestSuccessfulLogIn:
         form_an_order = driver.find_element(*TestLocators.FORM_AN_ORDER)
         assert form_an_order.is_displayed() and form_an_order.text == 'Оформить заказ'
 
-        driver.quit()
 
     def test_successful_log_in_forgot_password(self, driver):
         driver.get(TestUrl.FORGOT_PASSWORD_URL)
@@ -70,4 +65,3 @@ class TestSuccessfulLogIn:
         form_an_order = driver.find_element(*TestLocators.FORM_AN_ORDER)
         assert form_an_order.is_displayed() and form_an_order.text == 'Оформить заказ'
 
-        driver.quit()

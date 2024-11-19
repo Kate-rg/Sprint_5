@@ -9,7 +9,9 @@ def driver():
     driver = webdriver.Chrome()
     driver.set_window_size(1920, 1080)
 
-    return driver
+    yield driver
+
+    driver.quit()
 
 @pytest.fixture(scope='module')
 def test_data():

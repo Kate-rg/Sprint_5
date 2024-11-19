@@ -23,9 +23,8 @@ class TestRegistration:
         button_final_register.click()
         WebDriverWait(driver, 3).until(expected_conditions.url_to_be(TestUrl.LOGIN_URL))
         success_registration = driver.find_element(*TestLocators.TITLE_ENTER)
-        assert success_registration.is_displayed() and success_registration.text == 'Вход'
 
-        driver.quit()
+        assert success_registration.is_displayed() and success_registration.text == 'Вход'
 
 
     def test_wrong_password_registration(self, driver):
@@ -45,5 +44,3 @@ class TestRegistration:
 
         wrong_password = driver.find_element(*TestLocators.WRONG_PASSWORD)
         assert wrong_password.is_displayed() and wrong_password.text == 'Некорректный пароль'
-
-        driver.quit()
